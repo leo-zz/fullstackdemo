@@ -11,13 +11,13 @@ server.on('request',(req,res)=>{
     console.log('收到用户请求：'+url)
     res.writeHead(200,{'Content-Type':'text/plain;charset=utf-8'})
     if(url==='/'){
-        res.end('欢迎进入首页')
+        res.end('欢迎进入首页') 
     }
     else if(url==='/login'){
         res.end('欢迎进入登录页面')
     }
     else if(url==='/data'){
-        //
+        // 注意读取文件的路径，是相对于在命令行中执行node的路径
         fs.readFile('./static/data.json',function(error,data){
             if(error){
                 res.writeHead(500,{'Content-Type':'text/plain;charset=utf-8'})
