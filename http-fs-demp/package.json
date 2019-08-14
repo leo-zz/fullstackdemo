@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/leo-zz/fullstackdemo/issues"
   },
-  "homepage": "https://github.com/leo-zz/fullstackdemo#readme"
+  "homepage": "https://github.com/leo-zz/fullstackdemo#readme",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "eslint": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.1"
+  }
 }
