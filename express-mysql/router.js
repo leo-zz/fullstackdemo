@@ -21,7 +21,7 @@ try {
 router.post('/staff', (req, res) => {
 
     console.log('接收POST数据：' + JSON.stringify(req.body))
-    connect.query('insert into users values (null,"zhangsan","asdasd1231",18,"zhengzhou")', (err, ret) => {
+    connect.query('insert into users values (null,"'+req.body.username+'","'+req.body.password+'",'+req.body.age+',"'+req.body.city+'")', (err, ret) => {
         if (err) {
             res.send('保存失败' + JSON.stringify(err))
         } else {
@@ -47,7 +47,7 @@ router.get('/staff', (req, res) => {
 router.post('/staff/update', (req, res) => {
     console.log('更新参数:' + JSON.stringify(req.body))
     // 查找新增的第一个参数为_id值，第二个参数为修改的属性，第三个是回调函数
-    connect.query('', (err, ret) => {
+    connect.query('update users set username="'+req.body.username+'" ,password="'+req.body.password+'",age='+req.body.age+',city="'+req.body.city+'"where id = '+req.body.id, (err, ret) => {
         if (err) {
             res.send('更新失败' + JSON.stringify(err))
         } else {
