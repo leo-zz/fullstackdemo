@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="always" name="referrer">
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="any" mask="" href="https://www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg">
+    <title>百度一下，你就知道 </title>
+</head>
+
+<body>
+    <script>
+        // let a=1111
+        // // let a=2222
+
+
+        // // b=2222
+        // if(true){
+        //     const b=1111          
+        // }
+
+        // // alert(a)
+        // alert(b)
+
+
+        // let names=['zhangsan','ls','ww']
+        // alert(names)
+        // let no2=names[1]
+        // alert(no2)
+
+        // let [f1,f2,f3]=['apple','banana','orange']
+        // alert(f2)
+
+        // let employee = {
+        //     name: "zhangsan",
+        //     age: 25,
+        //     city: "zhoukou",
+        //     print: function print(content) {
+        //         let a1 = "aaa1";
+        //         let a2 = 222;
+        //         console.log("aaaa")
+        //         console.log(this)
+        //     }
+        // }
+        //  alert(employee.name)
+
+        // let {name,e_age,e_city};
+        // {name,e_age,e_city} = {
+        //     name: "zhangsan" ,
+        //     age: 25 ,
+        //     city: "zhoukou"
+        // };
+        // alert(e_age)
+
+
+        // function print(){
+        //     console.log("aaaa")
+        // }
+
+        // print()
+
+        // let print=function print(content){
+        //     let a1="aaa1";
+        //     let a2=222;
+        //     console.log("aaaa")
+        //     console.log(this)
+        // }
+
+        // let employee = {
+        //     name: "zhangsan",
+        //     age: 25,
+        //     city: "zhoukou",
+        //     print: (content1,c1='default') => {
+        //         console.log(c1)
+        //         console.log(this)
+        //     }
+        // }
+
+        // employee.print("a1",'b1')
+        // let c1 = "c1"
+        // let c2 = "c2"
+        // let c3 = "c3"
+        // let c4 = "c4"
+        // let c5 = "c5"
+        // employee.print(c1, c2,c3,c4,c5)
+        // let arr=[c1, c2,c3,c4,c5]
+        // console.log(arr)
+        // console.log(...arr)
+        // console.log(c1,c2,c3,c4,c5)
+        // alert(...arr)
+        // let print=content=>"log: "+content;
+
+        // console.log(print("xxxxxx222"))
+
+        let c1 = "c1"
+        let c2 = "c2"
+        let c3 = "c3"
+        let c4 = "c4"
+        let c5 = "c5"
+        let arr = [c1, c2, c3, c4, c5]
+
+        let arr3 = arr.map((item, index) =>{
+            arr[index]=item+index
+        }
+        //  item + index
+        )
+        // console.log("arr3", arr3)
+        console.log("arr", arr)
+
+        let arr2 = arr.forEach(function (a, b) {
+            console.log(a, b)
+            // return a+b
+            arr[b]=a+b
+        })
+        console.log("arr",arr)
+        console.log("arr2", arr2)
+
+
+
+
+    </script>
+</body>
