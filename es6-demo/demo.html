@@ -94,31 +94,97 @@
 
         // console.log(print("xxxxxx222"))
 
-        let c1 = "c1"
-        let c2 = "c2"
-        let c3 = "c3"
-        let c4 = "c4"
-        let c5 = "c5"
-        let arr = [c1, c2, c3, c4, c5]
+        // let c1 = "c1"
+        // let c2 = "c2"
+        // let c3 = "c3"
+        // let c4 = "c4"
+        // let c5 = "c5"
+        // let arr = [c1, c2, c3, c4, c5]
 
-        let arr3 = arr.map((item, index) =>{
-            arr[index]=item+index
-        }
-        //  item + index
-        )
+        // console.log("arr", arr)
+        // let arr3 = arr.map((item, index) =>{
+        //     // arr[index]=item+index
+        //     return item+index
+        // }
+        // //  item + index
+        // )
         // console.log("arr3", arr3)
-        console.log("arr", arr)
+        // console.log("arr", arr)
 
-        let arr2 = arr.forEach(function (a, b) {
-            console.log(a, b)
-            // return a+b
-            arr[b]=a+b
+        // let arr2 = arr.forEach(function (a, b) {
+        //     console.log(a, b+1)
+        //     // return a+b
+        //     arr[b]=a+(b+1)
+        // })
+        // console.log("arr",arr)
+        // console.log("arr2", arr2)
+        let employees = [{
+            name: "zhangsan",
+            age: 15,
+            city: "zhoukou",
+            birth: "714997702000"
+
+        },
+        {
+            name: "lisi",
+            age: 25,
+            city: "zhoukou",
+            birth: "809605702000"
+
+        }, {
+            name: "wangwu",
+            age: 8,
+            city: "zhoukou",
+            birth: "872764102000"
+
+        }]
+
+        // console.log(employees)
+
+        // debugger
+        // employees.forEach(function(item,index){
+        //     console.log(item.birth)
+        //     let birthdate=new Date(Number(item.birth));
+        //     employees[index].birth=birthdate
+        // })
+
+        // let new_employees = employees.map((item, index) => {
+
+        //     return {
+        //         name: item.name,
+        //         age: item.age,
+        //         city: item.city,
+        //         birth: new Date(Number(item.birth))
+
+        //     }
+        // })
+
+        // console.log("employees", employees)
+        // console.log("new_employees", new_employees)
+
+        // let new_employees = employees.filter((a, b) => a.age < 18 ? true : false)
+        // console.log(employees)
+        // let employees_age = [15, 25, 8,12,412,123412,1234124]
+        // let result = employees_age.reduce((pr, cv, ci) => {
+        //     console.log("++++++++", pr, "+++++++++++++", cv, "+++++++++++++", ci)
+        //     if (ci == employees_age.length - 1) {
+        //         return (pr + cv) / employees_age.length
+        //     } else {
+        //         return pr + cv
+        //     }
+        // })
+        // alert(result)
+
+        let result = employees.reduce((pr, cv, ci) => {
+            console.log("++++++++", pr, "+++++++++++++", cv, "+++++++++++++", ci)
+            if(ci==1) 
+                pr=pr.age
+            if (ci == employees.length - 1) {
+                return (pr + cv.age) / employees.length
+            } else {
+                return pr + cv.age
+            }
         })
-        console.log("arr",arr)
-        console.log("arr2", arr2)
-
-
-
-
+        alert(result)
     </script>
 </body>
