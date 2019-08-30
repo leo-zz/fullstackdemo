@@ -50,6 +50,29 @@ server.on('request',(req,res)=>{
                
             }
         })
+    }if(url==='/content2'){
+        fs.readFile('./static/data.json',function(error,data1){
+            if(error){
+                res.writeHead(500,{'Content-Type':'text/plain;charset=utf-8'})
+                res.end('数据获取失败：'+error.toString())
+            }else{
+                data1=JSON.parse(data1.toString())
+                data1.title='content_page'
+                console.log('data1: ',data1)
+                fs.readFile('./static/tpl.html',function(error,data2){
+                    if(error){
+                        res.writeHead(500,{'Content-Type':'text/plain;charset=utf-8'})
+                        res.end('数据获取失败：'+error.toString())
+                    }else{
+                        // 'Content-Type':'text/html' 否则浏览器不会渲染html标签
+                        res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'})
+                       const result= template.render(data2.toString(),data1)
+                        res.end(result)
+                    }
+                })
+               
+            }
+        })
     }else {
     res.end('{ hello : world,你好 : 世界}')
     }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <title>{{ title }}</title> -->
+  <script src="../node_modules/art-template/lib/template-web.js"></script>
+</head>
+<body>
+<script type="text/template" id="tpl">
+  <p>大家好，我叫：{{ name }}</p>
+  <p>我今年 {{ age }} 岁了</p>
+  <h1>我来自 {{ city }}</h1>
+</script>
+<script>
+var v=template('tpl',{"name":"leo",
+"age":1,"city":"zz"})
+console.log(v)
+</script>
+<div id="c"></div>
+</body>
+</html>
