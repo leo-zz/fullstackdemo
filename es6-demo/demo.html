@@ -121,20 +121,26 @@
         let employees = [{
             name: "zhangsan",
             age: 15,
-            city: "zhoukou",
+            city: "henan:zhoukou",
             birth: "714997702000"
 
         },
         {
             name: "lisi",
             age: 25,
-            city: "zhoukou",
+            city: "henan:zhengzhou",
             birth: "809605702000"
 
         }, {
             name: "wangwu",
             age: 8,
-            city: "zhoukou",
+            city: "beijing",
+            birth: "872764102000"
+
+        }, {
+            name: "qianliu",
+            age: 8,
+            city: "hubei:wuhan",
             birth: "872764102000"
 
         }]
@@ -175,16 +181,55 @@
         // })
         // alert(result)
 
-        let result = employees.reduce((pr, cv, ci) => {
-            console.log("++++++++", pr, "+++++++++++++", cv, "+++++++++++++", ci)
-            if(ci==1) 
-                pr=pr.age
-            if (ci == employees.length - 1) {
-                return (pr + cv.age) / employees.length
-            } else {
-                return pr + cv.age
-            }
-        })
-        alert(result)
+        // let result = employees.reduce((pr, cv, ci) => {
+        //     console.log("++++++++", pr, "+++++++++++++", cv, "+++++++++++++", ci)
+        //     if(ci==1) 
+        //         pr=pr.age
+        //     if (ci == employees.length - 1) {
+        //         return (pr + cv.age) / employees.length
+        //     } else {
+        //         return pr + cv.age
+        //     }
+        // })
+        // alert(result)
+
+        // let henan_es=employees.filter((v,i)=>{
+        //     let result = v.city.startsWith("henan:");
+        //     console.log(v,result)
+        //     return result;
+        // })
+        // console.log("henan_es",henan_es);
+        // console.log("employees",employees);
+
+        // let zz_es = employees.filter((v, i) => v.city.endsWith("zhengzhou"))
+        // console.log("zz_es", zz_es);
+        // console.log("employees", employees);
+
+
+
+        // let content1 = '来自郑州的员工，姓名是：'+zz_es[0].name+',年龄:'+zz_es[0].age;
+        // let content2 = "来自郑州的员工，姓名是："+zz_es[0].name+",年龄:"+zz_es[0].age;
+        // console.log("content1",content1,"content2",content2)
+        // let content3=`来自郑州的员工，姓名是：${zz_es[0].name},年龄: ${zz_es[0].age}`
+        // console.log("content3",content3)
+
+        //    console.log(employees)   
+        //    let c=JSON.stringify(employees);
+        //    console.log(c)
+
+        // const es=`[{"name":"zhangsan","age":15,"city":"henan:zhoukou","birth":"714997702000"},{"name":"lisi","age":25,"city":"henan:zhengzhou","birth":"809605702000"},{"name":"wangwu","age":8,"city":"beijing","birth":"872764102000"},{"name":"qianliu","age":8,"city":"hubei:wuhan","birth":"872764102000"}]`
+
+        // let es_arr=JSON.parse(es);
+        // es_arr[0].age=25
+        // console.log(es,es_arr)
+
+        let = name = "qianliu"
+        let = age = 8
+        let = city = "hubei:wuhan"
+        let = birth = "872764102000"
+
+        let e1 = {name,age,city,birth}
+        console.log(e1)
+
     </script>
 </body>
